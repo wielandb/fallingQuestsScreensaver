@@ -46,7 +46,7 @@ If you contribute using Construct 3, please use the following workflow:
 
 Use these settings on the export:
 
-![c3-1](readme-assets\c3-1.png)
+![c3-1](readme-assets/c3-1.png)
 
 ## License
 
