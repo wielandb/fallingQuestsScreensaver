@@ -1,0 +1,1452 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 35800,
+	"name": "fallingQuests",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Maus",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG-Bild",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Verblassen",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physik",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "7qpaqkfptoq",
+	"objectTypes": {
+		"items": [
+			"Quest",
+			"apple",
+			"Sprite",
+			"Maus",
+			"barrier_on_path",
+			"Button"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Layout 1"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Event-Blatt 1"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "Symbol-16.png",
+					"type": "image/png",
+					"sid": 899905507412528,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-32.png",
+					"type": "image/png",
+					"sid": 649980487891049,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-64.png",
+					"type": "image/png",
+					"sid": 688593694837815,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-128.png",
+					"type": "image/png",
+					"sid": 675154332600156,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-256.png",
+					"type": "image/png",
+					"sid": 131234891952916,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Symbol-512.png",
+					"type": "image/png",
+					"sid": 484410080894665,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Lade-Logo.png",
+					"type": "image/png",
+					"sid": 477806453022028,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "AddAcceptsCards.svg",
+							"type": "image/svg+xml",
+							"sid": 432589165703944,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddAcceptsCash.svg",
+							"type": "image/svg+xml",
+							"sid": 421226712860278,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddAddressStreet.svg",
+							"type": "image/svg+xml",
+							"sid": 333583308519979,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddAirCompressor.svg",
+							"type": "image/svg+xml",
+							"sid": 401806121030989,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddAirConditioning.svg",
+							"type": "image/svg+xml",
+							"sid": 314306987883554,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddAmenityCover.svg",
+							"type": "image/svg+xml",
+							"sid": 170075078282466,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBabyChangingTable.svg",
+							"type": "image/svg+xml",
+							"sid": 947118691745083,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBarrierOnPath.svg",
+							"type": "image/svg+xml",
+							"sid": 243929861221004,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBarrierOnRoad.svg",
+							"type": "image/svg+xml",
+							"sid": 488903537279948,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBenchBackrest.svg",
+							"type": "image/svg+xml",
+							"sid": 852878829234032,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBenchStatusOnBusStop.svg",
+							"type": "image/svg+xml",
+							"sid": 680744033415165,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBicycleBarrierInstallation.svg",
+							"type": "image/svg+xml",
+							"sid": 350338962468273,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBicycleBarrierType.svg",
+							"type": "image/svg+xml",
+							"sid": 777252076527919,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBicycleIncline.svg",
+							"type": "image/svg+xml",
+							"sid": 997453249182031,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBicyclePump.svg",
+							"type": "image/svg+xml",
+							"sid": 566518858600854,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeParkingAccess.svg",
+							"type": "image/svg+xml",
+							"sid": 482590013570406,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeParkingCapacity.svg",
+							"type": "image/svg+xml",
+							"sid": 957106527301004,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeParkingCover.svg",
+							"type": "image/svg+xml",
+							"sid": 557260110435382,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeParkingFee.svg",
+							"type": "image/svg+xml",
+							"sid": 531413098218759,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeParkingType.svg",
+							"type": "image/svg+xml",
+							"sid": 319340614414290,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeRentalCapacity.svg",
+							"type": "image/svg+xml",
+							"sid": 122721888833979,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeRentalType.svg",
+							"type": "image/svg+xml",
+							"sid": 595799675078857,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBikeRepairAvailability.svg",
+							"type": "image/svg+xml",
+							"sid": 809562002361406,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBinStatusOnBusStop.svg",
+							"type": "image/svg+xml",
+							"sid": 151975376974573,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBoardType.svg",
+							"type": "image/svg+xml",
+							"sid": 682419070740379,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBollardType.svg",
+							"type": "image/svg+xml",
+							"sid": 599635753420277,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBridgeStructure.svg",
+							"type": "image/svg+xml",
+							"sid": 284153638606240,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBuildingLevels.svg",
+							"type": "image/svg+xml",
+							"sid": 362506749678378,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBuildingType.svg",
+							"type": "image/svg+xml",
+							"sid": 240952214911736,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBusStopLit.svg",
+							"type": "image/svg+xml",
+							"sid": 313232194993802,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBusStopName.svg",
+							"type": "image/svg+xml",
+							"sid": 432724329205794,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBusStopShelter.svg",
+							"type": "image/svg+xml",
+							"sid": 277500172377080,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCameraType.svg",
+							"type": "image/svg+xml",
+							"sid": 998299116094849,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCampShower.svg",
+							"type": "image/svg+xml",
+							"sid": 950603735975013,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCampType.svg",
+							"type": "image/svg+xml",
+							"sid": 456793947187534,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCarWashType.svg",
+							"type": "image/svg+xml",
+							"sid": 703418000912314,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddChargingStationCapacity.svg",
+							"type": "image/svg+xml",
+							"sid": 186358978424541,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddChargingStationOperator.svg",
+							"type": "image/svg+xml",
+							"sid": 916342051068636,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddClothingBinOperator.svg",
+							"type": "image/svg+xml",
+							"sid": 822655145960884,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCrossing.svg",
+							"type": "image/svg+xml",
+							"sid": 827777237749972,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCrossingIsland.svg",
+							"type": "image/svg+xml",
+							"sid": 960338207047749,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCrossingKerbHeight.svg",
+							"type": "image/svg+xml",
+							"sid": 204806223660302,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCycleway.svg",
+							"type": "image/svg+xml",
+							"sid": 492092124161033,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCyclewayPartSurface.svg",
+							"type": "image/svg+xml",
+							"sid": 241518334229168,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCyclewaySegregation.svg",
+							"type": "image/svg+xml",
+							"sid": 916060782200609,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCyclewayWidth.svg",
+							"type": "image/svg+xml",
+							"sid": 983317178825605,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddDrinkingWater.svg",
+							"type": "image/svg+xml",
+							"sid": 682285587471157,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddDrinkingWaterType.svg",
+							"type": "image/svg+xml",
+							"sid": 964147720377944,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddEntrance.svg",
+							"type": "image/svg+xml",
+							"sid": 609026751603582,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddEntranceReference.svg",
+							"type": "image/svg+xml",
+							"sid": 430192470720014,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFerryAccessMotorVehicle.svg",
+							"type": "image/svg+xml",
+							"sid": 312285693061629,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFerryAccessPedestrian.svg",
+							"type": "image/svg+xml",
+							"sid": 371402982098387,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFireHydrantDiameter.svg",
+							"type": "image/svg+xml",
+							"sid": 212832979408369,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFireHydrantPosition.svg",
+							"type": "image/svg+xml",
+							"sid": 449579806963310,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFireHydrantRef.svg",
+							"type": "image/svg+xml",
+							"sid": 838399188602790,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFireHydrantType.svg",
+							"type": "image/svg+xml",
+							"sid": 914478865053535,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFootwayPartSurface.svg",
+							"type": "image/svg+xml",
+							"sid": 871395698788079,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddForestLeafType.svg",
+							"type": "image/svg+xml",
+							"sid": 568619472705730,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddFuelSelfService.svg",
+							"type": "image/svg+xml",
+							"sid": 704609000781071,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddGeneralFee.svg",
+							"type": "image/svg+xml",
+							"sid": 575793744710330,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddHairdresserCustomers.svg",
+							"type": "image/svg+xml",
+							"sid": 971485284566774,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddHalal.svg",
+							"type": "image/svg+xml",
+							"sid": 443457556187105,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddHandrail.svg",
+							"type": "image/svg+xml",
+							"sid": 905010717677492,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddHousenumber.svg",
+							"type": "image/svg+xml",
+							"sid": 913654591870084,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddInformationToTourism.svg",
+							"type": "image/svg+xml",
+							"sid": 804051124434860,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddInternetAccess.svg",
+							"type": "image/svg+xml",
+							"sid": 118679008039375,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddIsBuildingUnderground.svg",
+							"type": "image/svg+xml",
+							"sid": 164533662378999,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddIsDefibrillatorIndoor.svg",
+							"type": "image/svg+xml",
+							"sid": 601960809800738,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddKerbHeight.svg",
+							"type": "image/svg+xml",
+							"sid": 157537463953942,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddKosher.svg",
+							"type": "image/svg+xml",
+							"sid": 533377240999554,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddLanes.svg",
+							"type": "image/svg+xml",
+							"sid": 654282587765987,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddLevel.svg",
+							"type": "image/svg+xml",
+							"sid": 420977350199919,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMaxHeight.svg",
+							"type": "image/svg+xml",
+							"sid": 807408702374389,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMaxPhysicalHeight.svg",
+							"type": "image/svg+xml",
+							"sid": 143582261749435,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMaxSpeed.svg",
+							"type": "image/svg+xml",
+							"sid": 274546019687735,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMaxWeight.svg",
+							"type": "image/svg+xml",
+							"sid": 389969463588809,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMemorialType.svg",
+							"type": "image/svg+xml",
+							"sid": 581329119461404,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMotorcycleParkingCapacity.svg",
+							"type": "image/svg+xml",
+							"sid": 449578142773813,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddMotorcycleParkingCover.svg",
+							"type": "image/svg+xml",
+							"sid": 343525112616123,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddOneway.svg",
+							"type": "image/svg+xml",
+							"sid": 174675787575607,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddOpeningHours.svg",
+							"type": "image/svg+xml",
+							"sid": 463818783213942,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddOrchardProduce.svg",
+							"type": "image/svg+xml",
+							"sid": 880624654716425,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddParkingAccess.svg",
+							"type": "image/svg+xml",
+							"sid": 296737095733329,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddParkingFee.svg",
+							"type": "image/svg+xml",
+							"sid": 547834979750407,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddParkingType.svg",
+							"type": "image/svg+xml",
+							"sid": 930944985303335,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPathSmoothness.svg",
+							"type": "image/svg+xml",
+							"sid": 386566045844600,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPathSurface.svg",
+							"type": "image/svg+xml",
+							"sid": 988695784025697,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPitchLit.svg",
+							"type": "image/svg+xml",
+							"sid": 520347502110111,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPitchSurface.svg",
+							"type": "image/svg+xml",
+							"sid": 280558299032324,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPlaceName.svg",
+							"type": "image/svg+xml",
+							"sid": 717111477081409,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPlaygroundAccess.svg",
+							"type": "image/svg+xml",
+							"sid": 881851244301830,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPoliceType.svg",
+							"type": "image/svg+xml",
+							"sid": 923472818370230,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPostboxCollectionTimes.svg",
+							"type": "image/svg+xml",
+							"sid": 624330476818332,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPostboxRef.svg",
+							"type": "image/svg+xml",
+							"sid": 913463875790935,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPostboxRoyalCypher.svg",
+							"type": "image/svg+xml",
+							"sid": 671386168432493,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddPowerPolesMaterial.svg",
+							"type": "image/svg+xml",
+							"sid": 654614430753739,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddProhibitedForPedestrians.svg",
+							"type": "image/svg+xml",
+							"sid": 469096841953509,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRecyclingContainerMaterials.svg",
+							"type": "image/svg+xml",
+							"sid": 246336074089282,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRecyclingType.svg",
+							"type": "image/svg+xml",
+							"sid": 365451481384469,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddressOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 296598539860480,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRoadName.svg",
+							"type": "image/svg+xml",
+							"sid": 997526361289231,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRoadSmoothness.svg",
+							"type": "image/svg+xml",
+							"sid": 674332076685170,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRoadSurface.svg",
+							"type": "image/svg+xml",
+							"sid": 769442683549756,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRoadWidth.svg",
+							"type": "image/svg+xml",
+							"sid": 811639298419491,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRoofShape.svg",
+							"type": "image/svg+xml",
+							"sid": 695992852564390,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSeating.svg",
+							"type": "image/svg+xml",
+							"sid": 843454529364567,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSecondHandBicycleAvailability.svg",
+							"type": "image/svg+xml",
+							"sid": 648993881978126,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSelfServiceLaundry.svg",
+							"type": "image/svg+xml",
+							"sid": 864343873383194,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSidewalk.svg",
+							"type": "image/svg+xml",
+							"sid": 442109654132719,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSidewalkSurface.svg",
+							"type": "image/svg+xml",
+							"sid": 152853161060093,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSmoking.svg",
+							"type": "image/svg+xml",
+							"sid": 317851647897541,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSport.svg",
+							"type": "image/svg+xml",
+							"sid": 588007949512313,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddStepCount.svg",
+							"type": "image/svg+xml",
+							"sid": 578450778187988,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddStepCountStile.svg",
+							"type": "image/svg+xml",
+							"sid": 803971675967553,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddStepsIncline.svg",
+							"type": "image/svg+xml",
+							"sid": 622048318798053,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddStepsRamp.svg",
+							"type": "image/svg+xml",
+							"sid": 931012596213676,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddStileType.svg",
+							"type": "image/svg+xml",
+							"sid": 493069089861310,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSummitCross.svg",
+							"type": "image/svg+xml",
+							"sid": 853725500560174,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSummitRegister.svg",
+							"type": "image/svg+xml",
+							"sid": 283053264237697,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddSuspectedOneway.svg",
+							"type": "image/svg+xml",
+							"sid": 906007204936804,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTactilePavingBusStop.svg",
+							"type": "image/svg+xml",
+							"sid": 933081162245537,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTactilePavingCrosswalk.svg",
+							"type": "image/svg+xml",
+							"sid": 551772167350598,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTactilePavingKerb.svg",
+							"type": "image/svg+xml",
+							"sid": 564917985826349,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTactilePavingSteps.svg",
+							"type": "image/svg+xml",
+							"sid": 683962076121996,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddToiletAvailability.svg",
+							"type": "image/svg+xml",
+							"sid": 595263591084906,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddToiletsFee.svg",
+							"type": "image/svg+xml",
+							"sid": 277837498030474,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTracktype.svg",
+							"type": "image/svg+xml",
+							"sid": 701951176539134,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTrafficCalmingType.svg",
+							"type": "image/svg+xml",
+							"sid": 319070130168329,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTrafficSignalsButton.svg",
+							"type": "image/svg+xml",
+							"sid": 151259616706717,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTrafficSignalsSound.svg",
+							"type": "image/svg+xml",
+							"sid": 702494462173914,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddTrafficSignalsVibration.svg",
+							"type": "image/svg+xml",
+							"sid": 810373322101773,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddVegan.svg",
+							"type": "image/svg+xml",
+							"sid": 631219432630539,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddVegetarian.svg",
+							"type": "image/svg+xml",
+							"sid": 689486380942245,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddWayLit.svg",
+							"type": "image/svg+xml",
+							"sid": 280340573380591,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddWheelchairAccessToilets.svg",
+							"type": "image/svg+xml",
+							"sid": 762308117820001,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddWheelchairAccessToiletsPart.svg",
+							"type": "image/svg+xml",
+							"sid": 706017921540124,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "CheckExistence.svg",
+							"type": "image/svg+xml",
+							"sid": 795920858024810,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "CheckOpeningHoursSigned.svg",
+							"type": "image/svg+xml",
+							"sid": 655336329319153,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "CheckShopExistence.svg",
+							"type": "image/svg+xml",
+							"sid": 277380691066246,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "CyclewayOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 620487571797666,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "DetermineRecyclingGlass.svg",
+							"type": "image/svg+xml",
+							"sid": 310214817572785,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "MarkCompletedBuildingConstruction.svg",
+							"type": "image/svg+xml",
+							"sid": 699354418254569,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "MarkCompletedHighwayConstruction.svg",
+							"type": "image/svg+xml",
+							"sid": 541750244852352,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "OTHER.svg",
+							"type": "image/svg+xml",
+							"sid": 329709853243533,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ShopsOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 426425292087738,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SidewalkOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 680444894842859,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SpecifyShopType.svg",
+							"type": "image/svg+xml",
+							"sid": 844195170940385,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "StreetParkingOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 457925705641295,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "SurfaceOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 487354009370345,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "WayLitOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 983442248480735,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddWheelchairAccessBusiness.svg",
+							"type": "image/svg+xml",
+							"sid": 566893689903329,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "quests"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Zeitlinie 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "A screensaver showing live StreetComplete quests beeing solved",
+		"version": "1.0.0.3",
+		"author": "wielandb",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": null
+}

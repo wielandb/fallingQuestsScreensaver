@@ -1,0 +1,49 @@
+{
+	"name": "Quest",
+	"plugin-id": "SVGPicture",
+	"sid": 955925709725281,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "age",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 727988707435110
+		},
+		{
+			"name": "QuestName",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 683039893262367
+		},
+		{
+			"name": "anzahl",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 642016833370613
+		},
+		{
+			"name": "schuessAngle",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 711122502643606
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Physics",
+			"name": "Physik",
+			"sid": 529178675708106
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Verblassen",
+			"sid": 552358967169983
+		}
+	],
+	"effectTypes": []
+}
