@@ -227,23 +227,6 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-start-of-layout",
-					"objectClass": "System",
-					"sid": 512991923099086
-				}
-			],
-			"actions": [
-				{
-					"type": "script",
-					"script": ""
-				}
-			],
-			"sid": 338794526040230
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
 					"sid": 405019767331405,

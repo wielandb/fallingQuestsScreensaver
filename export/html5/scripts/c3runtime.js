@@ -4142,10 +4142,9 @@ self.C3_GetObjectRefTable = function () {
 		C3.Behaviors.Physics.Acts.SetDensity,
 		C3.Plugins.SVGPicture.Acts.RotateClockwise,
 		C3.Plugins.System.Cnds.OnLayoutStart,
-		C3.ScriptsInEvents["Event-Blatt1_Event7_Act1"],
 		C3.Plugins.Sprite.Cnds.OnCollision,
 		C3.Behaviors.Physics.Acts.ApplyImpulseAtAngle,
-		C3.ScriptsInEvents["Event-Blatt1_Event11_Act1"]
+		C3.ScriptsInEvents["Event-Blatt1_Event10_Act1"]
 	];
 };
 self.C3_JsPropNameTable = [

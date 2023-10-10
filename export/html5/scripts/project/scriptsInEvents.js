@@ -3,12 +3,7 @@
 
 const scriptsInEvents = {
 
-	async ["Event-Blatt1_Event7_Act1"](runtime, localVars)
-	{
-		
-	},
-
-	async ["Event-Blatt1_Event11_Act1"](runtime, localVars)
+	async ["Event-Blatt1_Event10_Act1"](runtime, localVars)
 	{
 		async function fetchQuestTypesFromChangesets() {
 		    // Fetch the state.txt and extract sequenceNumber

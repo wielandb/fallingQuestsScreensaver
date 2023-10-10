@@ -11,19 +11,19 @@ If you want to use it as an eye-catcher at a conference or just want to check it
 
 1: Make sure you are changing your screen saver. Go to "Installed" and select "Set screen saver" if the text above does not say "screen saver"
 
-![we-1](readme-assets\we-1.png)
+![we-1](readme-assets/we-1.png)
 
 2: Make sure your screen saver is set to "configured seperately".
 
-![we-2](readme-assets\we-2.png)
+![we-2](readme-assets/we-2.png)
 
 3: Go to "Open background" and then "Open from URL"
 
-![](readme-assets\we-3.png)
+![](readme-assets/we-3.png)
 
 4: Paste the URL https://wielandb.github.io/fallingQuestsScreensaver/export/html5/ into the URL field, and give it a name you will remember it by later.
 
-![we-4](readme-assets\we-4.png)
+![we-4](readme-assets/we-4.png)
 
 5: Hit "OK"
 
