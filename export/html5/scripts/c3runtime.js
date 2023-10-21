@@ -4136,6 +4136,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.SVGPicture.Cnds.CompareInstanceVar,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Behaviors.Physics.Acts.SetImmovable,
+		C3.Plugins.SVGPicture.Acts.SetVisible,
 		C3.Plugins.System.Cnds.ForEach,
 		C3.Plugins.SVGPicture.Acts.SetInstanceVar,
 		C3.Plugins.System.Exps.choose,

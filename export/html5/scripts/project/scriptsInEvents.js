@@ -81,6 +81,7 @@ const scriptsInEvents = {
 			questInst.instVars.age = 0 - getRandomInt(19);
 			questInst.instVars.QuestName = x[0];
 			questInst.instVars.anzahl = x[1];
+			questInst.isVisible = false;
 			} 
 		
 		});
