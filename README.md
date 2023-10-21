@@ -40,9 +40,9 @@ If you contribute using Construct 3, please use the following workflow:
 - Open the .c3p-File to work on the project
 - Make your changes
 - Bump the version number, at least by one at the last digit
-- Use Menu > Save Project As > Single Project File and select the file in `projectfiles/single/`
-- Use Menu > Save Project As > Project Folder and select the folder `projectfiles/folder/`
-- Use Menu > Export > HTML5 to export the HTML5-Version of the project to `export/html5`
+- Use Menu > Project > Save Project As > Single Project File and select the file in `projectfiles/single/`
+- Use Menu > Project > Save Project As > Project Folder and select the folder `projectfiles/folder/`
+- Use Menu > Project > Export > HTML5 to export the HTML5-Version of the project. Replace all files in `export/html5` with the files you just downloaded.
 
 Use these settings on the export:
 
