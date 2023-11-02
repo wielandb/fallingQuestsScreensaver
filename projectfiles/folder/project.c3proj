@@ -1394,7 +1394,7 @@
 	},
 	"properties": {
 		"description": "A screensaver showing live StreetComplete quests beeing solved",
-		"version": "1.0.0.6",
+		"version": "1.0.0.7",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",

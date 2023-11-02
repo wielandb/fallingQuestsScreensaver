@@ -83,10 +83,10 @@
 				{
 					"id": "set-size",
 					"objectClass": "Quest",
-					"sid": 781431962200278,
+					"sid": 987056482212470,
 					"parameters": {
-						"width": "50 + (5 * (Quest.anzahl))",
-						"height": "50 + (5 * (Quest.anzahl))"
+						"width": "min(50 + (5 * (Quest.anzahl)), 500)",
+						"height": "min(50 + (5 * (Quest.anzahl)), 500)"
 					}
 				}
 			],

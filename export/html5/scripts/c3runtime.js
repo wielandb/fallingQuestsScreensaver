@@ -4133,6 +4133,7 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.SVGPicture.Acts.AddInstanceVar,
 		C3.Plugins.SVGPicture.Acts.SetImageByName,
 		C3.Plugins.SVGPicture.Acts.SetSize,
+		C3.Plugins.System.Exps.min,
 		C3.Plugins.SVGPicture.Cnds.CompareInstanceVar,
 		C3.Behaviors.Fade.Acts.StartFade,
 		C3.Behaviors.Physics.Acts.SetImmovable,
@@ -4267,8 +4268,9 @@ self.C3_ExpressionFuncs = [
 			return () => (("quests/" + n0.ExpInstVar()) + ".svg");
 		},
 		p => {
-			const n0 = p._GetNode(0);
-			return () => (50 + (5 * n0.ExpInstVar()));
+			const f0 = p._GetNode(0).GetBoundMethod();
+			const n1 = p._GetNode(1);
+			return () => f0((50 + (5 * n1.ExpInstVar())), 500);
 		},
 		() => 60,
 		() => 0,
