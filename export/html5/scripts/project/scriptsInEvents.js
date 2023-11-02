@@ -7,20 +7,27 @@ const scriptsInEvents = {
 	{
 		async function fetchQuestTypesFromChangesets() {
 		    // Fetch the state.txt and extract sequenceNumber
-		    const response = await fetch('https://planet.openstreetmap.org/replication/minute/state.txt');
+		    const response = await fetch('https://wielandbreitfeld.de/assets/osm-proxy.php?type=state');
 		    const text = await response.text();
 		    const sequenceNumber = text.split('\n')[1].split('=')[1];
 		
 		    // Convert sequence number to the desired format
 		    const paddedSequenceNumber = sequenceNumber.padStart(9, '0');
-		    const url = `https://planet.openstreetmap.org/replication/minute/${paddedSequenceNumber.slice(0,3)}/${paddedSequenceNumber.slice(3,6)}/${paddedSequenceNumber.slice(6,9)}.osc.gz`;
+			console.log(paddedSequenceNumber);
+		    // const url = `https://planet.openstreetmap.org/replication/minute/${paddedSequenceNumber.slice(0,3)}/${paddedSequenceNumber.slice(3,6)}/${paddedSequenceNumber.slice(6,9)}.osc.gz`;
+			
+			const url = "https://wielandbreitfeld.de/assets/osm-proxy.php";
 		
 		    // Fetch the .gz file
-		    const responseGz = await fetch(url);
-		    const arrayBuffer = await responseGz.arrayBuffer();
+		    //const responseGz = await fetch(url);
+		    //const arrayBuffer = await responseGz.arrayBuffer();
 		
 		    // Decompress using pako
-		    const decompressedData = pako.inflate(arrayBuffer, { to: 'string' });
+		    //const decompressedData = pako.inflate(arrayBuffer, { to: 'string' });
+		
+			const decompressedDataFetch = await fetch(url);
+			const decompressedData = await decompressedDataFetch.text();
+			console.log(decompressedData);
 		
 		    // Extract all unique changeset numbers
 		    const changesetRegex = /changeset="(\d+)"/g;
