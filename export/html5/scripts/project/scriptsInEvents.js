@@ -6,7 +6,7 @@ const scriptsInEvents = {
 	async ["Event-Blatt1_Event10_Act1"](runtime, localVars)
 	{
 		async function fetchQuestTypesFromChangesets() {
-			const url = "https://wielandbreitfeld.de/assets/osm-proxy.php";
+			const url = "https://wielandbreitfeld.de/assets/proxy/osm-proxy.php";
 		
 			const diffDataFetch = await fetch(url);
 			const diffData = await diffDataFetch.text();
