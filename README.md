@@ -27,6 +27,14 @@ If you want to use it as an eye-catcher at a conference or just want to check it
 
 5: Hit "OK"
 
+## How it works
+
+At the start of the execution and then every minute, your browser will request the newest changes to the OSM Database. After receiving, every changeset that happened in this diff-File is checked if it was made by StreetComplete. All quest types are extracted and the corresponding balls are spawned. They have a size and weight that scales with how many changes this changeset is big, but the size of the balls is capped at 500px, while the weight is not capped. To intruduce more chaos, every ball spawns with an initial rotation and gets assigned a force vector that it will be affected by every time it collides with the floor. This assures also that all balls will slowly make their way off the screen.
+
+### The CORS-Proxy
+
+This program uses a CORS-Proxy I have hosted on my own website because the CORS-Policy of the OSM Planet files makes most browsers not use them when requested directly. This has the side-advantage that the proxy also caches the XML for the Diff-Files so the load this program causes on the OSM Planet Server stays minimal no matter how many people use it.
+
 ## How to contribute
 
 ### Contributing without Construct 3
