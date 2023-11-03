@@ -1,4 +1,6 @@
 # fallingQuestsScreensaver
+![fallingQuests](https://github.com/wielandb/fallingQuestsScreensaver/assets/29458682/2808da7f-8c2c-43c1-bfd2-748bca1c85c5)
+
 A website that shows solved [StreetComplete](https://github.com/streetcomplete/StreetComplete)-quests bouncing around as little balls, that can be used as a screensaver for example, or even as an eye-catcher at a conference etc.
 
 ## How to use it
