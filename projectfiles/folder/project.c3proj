@@ -1373,6 +1373,14 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "AddCrossingType.svg",
+							"type": "image/svg+xml",
+							"sid": 253420067257327,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
@@ -1394,7 +1402,7 @@
 	},
 	"properties": {
 		"description": "A screensaver showing live StreetComplete quests beeing solved",
-		"version": "1.0.0.7",
+		"version": "1.0.0.8",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",
