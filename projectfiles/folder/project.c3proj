@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 35800,
+	"savedWithRelease": 37900,
 	"name": "fallingQuests",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -1191,14 +1191,6 @@
 							}
 						},
 						{
-							"name": "AddTrafficSignalsButton.svg",
-							"type": "image/svg+xml",
-							"sid": 151259616706717,
-							"file-info": {
-								"purpose": "none"
-							}
-						},
-						{
 							"name": "AddTrafficSignalsSound.svg",
 							"type": "image/svg+xml",
 							"sid": 702494462173914,
@@ -1381,6 +1373,30 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "AddTrafficSignalsButton.svg",
+							"type": "image/svg+xml",
+							"sid": 141515073489730,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "BuildingsOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 954985793878467,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ThingsOverlay.svg",
+							"type": "image/svg+xml",
+							"sid": 364106245686386,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
@@ -1400,9 +1416,13 @@
 			}
 		]
 	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
 	"properties": {
 		"description": "A screensaver showing live StreetComplete quests beeing solved",
-		"version": "1.0.0.8",
+		"version": "1.0.0.9",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",
