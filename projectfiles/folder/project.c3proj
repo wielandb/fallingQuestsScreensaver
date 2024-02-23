@@ -1397,6 +1397,14 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "AddCrossingSignals.svg",
+							"type": "image/svg+xml",
+							"sid": 855549042621137,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
