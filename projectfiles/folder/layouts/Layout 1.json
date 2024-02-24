@@ -64,33 +64,6 @@
 					}
 				},
 				{
-					"type": "apple",
-					"properties": {
-						"svg-file": 133933335595424,
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 3,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 2559,
-						"y": 1067,
-						"width": 150,
-						"height": 150,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Sprite",
 					"properties": {
 						"initially-visible": true,
@@ -124,33 +97,6 @@
 						"height": 250,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "barrier_on_path",
-					"properties": {
-						"svg-file": 911009825236456,
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 6,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 2536,
-						"y": 1672,
-						"width": 150,
-						"height": 150,
-						"originX": 0,
-						"originY": 0,
 						"color": [
 							1,
 							1,

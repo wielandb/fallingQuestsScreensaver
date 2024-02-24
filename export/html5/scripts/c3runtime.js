@@ -4280,19 +4280,15 @@ self.C3_JsPropNameTable = [
 	{Physik: 0},
 	{Verblassen: 0},
 	{Quest: 0},
-	{apple: 0},
 	{Sprite: 0},
 	{Maus: 0},
-	{barrier_on_path: 0},
 	{Button: 0}
 ];
 
 self.InstanceType = {
 	Quest: class extends self.ISVGPictureInstance {},
-	apple: class extends self.ISVGPictureInstance {},
 	Sprite: class extends self.ISpriteInstance {},
 	Maus: class extends self.IInstance {},
-	barrier_on_path: class extends self.ISVGPictureInstance {},
 	Button: class extends self.IButtonInstance {}
 }
 }

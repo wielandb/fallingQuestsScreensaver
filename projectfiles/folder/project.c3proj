@@ -53,10 +53,8 @@
 	"objectTypes": {
 		"items": [
 			"Quest",
-			"apple",
 			"Sprite",
 			"Maus",
-			"barrier_on_path",
 			"Button"
 		],
 		"subfolders": []
