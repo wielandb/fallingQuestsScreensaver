@@ -1405,6 +1405,70 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "AddBarrierType.svg",
+							"type": "image/svg+xml",
+							"sid": 974202445239034,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddRailwayCrossingBarrier.svg",
+							"type": "image/svg+xml",
+							"sid": 845001540021850,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddReligionToWaysideShrine.svg",
+							"type": "image/svg+xml",
+							"sid": 915646921227031,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddAtmCashIn.svg",
+							"type": "image/svg+xml",
+							"sid": 213679611887750,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddIsAmenityIndoor.svg",
+							"type": "image/svg+xml",
+							"sid": 155439496730612,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddWheelchairAccessPublicTransport.svg",
+							"type": "image/svg+xml",
+							"sid": 517485821433920,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "CheckShopType.svg",
+							"type": "image/svg+xml",
+							"sid": 181967554999998,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddCampPower.svg",
+							"type": "image/svg+xml",
+							"sid": 733203331187793,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
@@ -1430,7 +1494,7 @@
 	},
 	"properties": {
 		"description": "A screensaver showing live StreetComplete quests beeing solved",
-		"version": "1.0.0.9",
+		"version": "1.0.0.10",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",
