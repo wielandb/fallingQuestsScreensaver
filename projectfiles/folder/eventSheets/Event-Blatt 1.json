@@ -2,6 +2,16 @@
 	"name": "Event-Blatt 1",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "chosenChangeSetID",
+			"type": "string",
+			"initialValue": "\"\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 632569680419766
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -264,6 +274,15 @@
 				{
 					"callFunction": "FetchAndSpawn",
 					"sid": 879278430851662
+				},
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 255270612902420,
+					"parameters": {
+						"tag": "\"Translations\"",
+						"file": "de.json"
+					}
 				}
 			],
 			"sid": 118846095712978
@@ -296,6 +315,33 @@
 			"sid": 940449039189627
 		},
 		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Maus",
+					"sid": 369244226592383,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Quest"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 334628921661825,
+					"parameters": {
+						"variable": "chosenChangeSetID",
+						"value": "Quest.changeSetID"
+					}
+				}
+			],
+			"sid": 772403805556298
+		},
+		{
 			"functionName": "FetchAndSpawn",
 			"functionDescription": "",
 			"functionCategory": "",
@@ -308,10 +354,319 @@
 			"actions": [
 				{
 					"type": "script",
-					"script": "async function fetchQuestTypesFromChangesets() {\n\tconst url = \"https://wielandbreitfeld.de/assets/proxy/osm-proxy.php\";\n\n\tconst diffDataFetch = await fetch(url);\n\tconst diffData = await diffDataFetch.text();\n\n    // Extract all unique changeset numbers\n    const changesetRegex = /changeset=\"(\\d+)\"/g;\n    const uniqueChangesets = new Set();\n    let match;\n\n    while ((match = changesetRegex.exec(diffData)) !== null) {\n        uniqueChangesets.add(match[1]);\n    }\n\n    const questTypeCounts = {};\n\n    for (let changeset of uniqueChangesets) {\n        const changesetResponse = await fetch(`https://api.openstreetmap.org/api/0.6/changeset/${changeset}`);\n        const changesetData = await changesetResponse.text();\n\n        const questTypeMatch = /<tag k=\"StreetComplete:quest_type\" v=\"([^\"]+)\"/.exec(changesetData);\n        const changesCountMatch = /changes_count=\"(\\d+)\"/.exec(changesetData);\n\n        if (questTypeMatch && changesCountMatch) {\n            const questType = questTypeMatch[1];\n            const changesCount = parseInt(changesCountMatch[1], 10);\n\n            questTypeCounts[questType] = (questTypeCounts[questType] || 0) + changesCount;\n        }\n    }\n\n    const result = Object.entries(questTypeCounts).map(([type, count]) => [type, count]);\n\n    return result;\n}\n\nfunction getRandomInt(max) {\n  return Math.floor(Math.random() * max);\n}\n\nconst delay = ms => new Promise(res => setTimeout(res, ms));\n\n\nfetchQuestTypesFromChangesets().then(questTypes => {\n    //console.log(questTypes);\n\tfor (const x of questTypes)\n\t{\n\tlet mX = getRandomInt(1850);\n\tlet mY = -50 - getRandomInt(300) * (x[1] * 0.5) ;\n\tlet questInst = runtime.objects.Quest.createInstance(0, mX, mY);\n\tquestInst.instVars.age = 0 - getRandomInt(19);\n\tquestInst.instVars.QuestName = x[0];\n\tquestInst.instVars.anzahl = x[1];\n\tquestInst.isVisible = false;\n\t} \n\n});\n"
+					"script": "async function fetchQuestTypesFromChangesets() {\n\tconst url = \"https://wielandbreitfeld.de/assets/proxy/osm-proxy.php\";\n\n\tconst diffDataFetch = await fetch(url);\n\tconst diffData = await diffDataFetch.text();\n\n    // Extract all unique changeset numbers\n    const changesetRegex = /changeset=\"(\\d+)\"/g;\n    const uniqueChangesets = new Set();\n    let match;\n\n    while ((match = changesetRegex.exec(diffData)) !== null) {\n        uniqueChangesets.add(match[1]);\n    }\n\n    const questTypeCounts = [];\n\n    for (let changeset of uniqueChangesets) {\n        const changesetResponse = await fetch(`https://api.openstreetmap.org/api/0.6/changeset/${changeset}`);\n        const changesetData = await changesetResponse.text();\n\n        const questTypeMatch = /<tag k=\"StreetComplete:quest_type\" v=\"([^\"]+)\"/.exec(changesetData);\n        const changesCountMatch = /changes_count=\"(\\d+)\"/.exec(changesetData);\n\t\tconst userMatch = /user=\"([^\"]+)\"/.exec(changesetData); // Regex to extract user\n\t\tvar changesetIDMatch =  /id=\"(\\d+)\"/.exec(changesetData);\n\n\n        if (questTypeMatch && changesCountMatch) {\n            var questType = questTypeMatch[1];\n            var changesCount = parseInt(changesCountMatch[1], 10);\n\t\t\tvar user = userMatch[1]; // Extracted user\n\t\t\tvar changesetID =  changesetIDMatch[1];\n\t\t\tconsole.log(changesetIDMatch[1]);\n\n\n            questTypeCounts.push({\"changesCount\": changesCount, \"questType\": questType, \"user\": user, \"changesetID\": changesetID});\n        }\n    }\n\n    return questTypeCounts;\n}\n\nfunction getRandomInt(max) {\n  return Math.floor(Math.random() * max);\n}\n\nconst delay = ms => new Promise(res => setTimeout(res, ms));\n\n\nfetchQuestTypesFromChangesets().then(questTypes => {\n    //console.log(questTypes);\n\tfor (const x of questTypes)\n\t{\n\tlet mX = getRandomInt(1850);\n\tlet mY = -50 - getRandomInt(300) * (x[\"changesCount\"] * 0.5) ;\n\tlet questInst = runtime.objects.Quest.createInstance(0, mX, mY);\n\tquestInst.instVars.age = 0 - getRandomInt(19);\n\tquestInst.instVars.QuestName = x[\"questType\"];\n\tquestInst.instVars.anzahl = x[\"changesCount\"];\n\tquestInst.instVars.changeSetID =  String(x[\"changesetID\"]);\n\tquestInst.instVars.user = x[\"user\"];\n\tquestInst.isVisible = false;\n\t} \n\n});\n"
 				}
 			],
 			"sid": 804863716168118
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Quest",
+					"sid": 342447675316547,
+					"parameters": {
+						"instance-variable": "changeSetID",
+						"comparison": 0,
+						"value": "chosenChangeSetID"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "clear-canvas",
+					"objectClass": "LeinwandZeichnen",
+					"sid": 545574630318022,
+					"parameters": {
+						"color": "rgba(0, 0, 0, 0)"
+					}
+				},
+				{
+					"id": "line",
+					"objectClass": "LeinwandZeichnen",
+					"sid": 763851865555325,
+					"parameters": {
+						"x1": "0",
+						"y1": "0",
+						"x2": "Quest.X",
+						"y2": "Quest.Y",
+						"color": "rgba(255, 0, 0, 100)",
+						"line-thickness": "5",
+						"line-cap": "butt"
+					}
+				}
+			],
+			"sid": 324472425175006,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "Quest",
+							"sid": 600258418642123,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 391348168570218,
+							"parameters": {
+								"variable": "chosenChangeSetID",
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "clear-canvas",
+							"objectClass": "LeinwandZeichnen",
+							"sid": 909516151970335,
+							"parameters": {
+								"color": "rgba(0, 0, 0, 0)"
+							}
+						}
+					],
+					"sid": 875995710243658
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-key",
+							"objectClass": "JSON",
+							"sid": 907915240914974,
+							"parameters": {
+								"path": "Quest.QuestName"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 155889385071599,
+							"parameters": {
+								"text": "\"Nutzer \" & Quest.user & \" hat \" & Quest.anzahl & \" mal die Frage [b]\" &   JSON.Get(Quest.QuestName)  & \"[/b] beantwortet. \""
+							}
+						}
+					],
+					"sid": 796523942101247
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 537245024433429
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text",
+							"sid": 783486170946345,
+							"parameters": {
+								"text": "\"Nutzer \" & Quest.user & \" hat \" & Quest.anzahl & \" Datenpunkte hinzugefügt! (\" & Quest.QuestName & \")\""
+							}
+						}
+					],
+					"sid": 421090544006757
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 381683210644421,
+					"parameters": {
+						"tag": "\"Translations\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "parse",
+					"objectClass": "JSON",
+					"sid": 627289770454095,
+					"parameters": {
+						"data": "AJAX.LastData"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 479030821711405,
+					"parameters": {
+						"text": "JSON.Get(\"AddBuildingType\")"
+					}
+				}
+			],
+			"sid": 867810863304859
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 139324820626194,
+					"parameters": {
+						"variable": "chosenChangeSetID",
+						"comparison": 0,
+						"value": "\"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SCBanner",
+					"sid": 888495297387902,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text",
+					"sid": 457365682138337,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LeinwandZeichnen",
+					"sid": 254610339688238,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 869482575816748
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 133166591789357
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "SCBanner",
+					"sid": 113875144821615,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Text",
+					"sid": 397847078056603,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "LeinwandZeichnen",
+					"sid": 348014191298598,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 407125957818166
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 700890509809757,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "ChooseQuestUntilValid",
+					"sid": 971134109100451
+				}
+			],
+			"sid": 277043655008879
+		},
+		{
+			"functionName": "ChooseQuestUntilValid",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 366310267500860,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-random-instance",
+							"objectClass": "System",
+							"sid": 897474706225948,
+							"parameters": {
+								"object": "Quest"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 999972507246076,
+							"parameters": {
+								"variable": "chosenChangeSetID",
+								"value": "Quest.changeSetID"
+							}
+						}
+					],
+					"sid": 190257361724872,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-screen",
+									"objectClass": "Quest",
+									"sid": 154784097222798,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "ChooseQuestUntilValid",
+									"sid": 858972778728165
+								}
+							],
+							"sid": 651599306873029
+						}
+					]
+				}
+			]
 		}
 	],
 	"sid": 872472397311688

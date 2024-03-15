@@ -31,6 +31,20 @@
 			"desc": "",
 			"show": true,
 			"sid": 711122502643606
+		},
+		{
+			"name": "user",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 189517137945480
+		},
+		{
+			"name": "changeSetID",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 534461650562124
 		}
 	],
 	"behaviorTypes": [

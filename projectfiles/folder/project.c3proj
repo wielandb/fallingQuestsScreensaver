@@ -8,8 +8,36 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "AJAX",
+			"name": "AJAX",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Button",
 			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Dictionary",
+			"name": "Wörterbuch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "DrawingCanvas",
+			"name": "Leinwand zeichnen",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Json",
+			"name": "JSON",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -35,6 +63,13 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "Fade",
 			"name": "Verblassen",
@@ -55,7 +90,13 @@
 			"Quest",
 			"Sprite",
 			"Maus",
-			"Button"
+			"Button",
+			"SCBanner",
+			"LeinwandZeichnen",
+			"Text",
+			"JSON",
+			"QuestQuestions",
+			"AJAX"
 		],
 		"subfolders": []
 	},
@@ -1471,6 +1512,34 @@
 					],
 					"subfolders": [],
 					"name": "quests"
+				},
+				{
+					"items": [
+						{
+							"name": "streetcomplete_rect.svg",
+							"type": "image/svg+xml",
+							"sid": 474853294626882,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "svgs_other"
+				},
+				{
+					"items": [
+						{
+							"name": "de.json",
+							"type": "application/json",
+							"sid": 570449880613032,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "json"
 				}
 			]
 		}
@@ -1492,7 +1561,7 @@
 	},
 	"properties": {
 		"description": "A screensaver showing live StreetComplete quests beeing solved",
-		"version": "1.0.0.10",
+		"version": "2.0.0.0",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",

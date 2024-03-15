@@ -3,7 +3,7 @@
 
 const scriptsInEvents = {
 
-	async ["Event-Blatt1_Event10_Act1"](runtime, localVars)
+	async ["Event-Blatt1_Event11_Act1"](runtime, localVars)
 	{
 		async function fetchQuestTypesFromChangesets() {
 			const url = "https://wielandbreitfeld.de/assets/proxy/osm-proxy.php";
@@ -20,7 +20,7 @@ const scriptsInEvents = {
 		        uniqueChangesets.add(match[1]);
 		    }
 		
-		    const questTypeCounts = {};
+		    const questTypeCounts = [];
 		
 		    for (let changeset of uniqueChangesets) {
 		        const changesetResponse = await fetch(`https://api.openstreetmap.org/api/0.6/changeset/${changeset}`);
@@ -28,18 +28,23 @@ const scriptsInEvents = {
 		
 		        const questTypeMatch = /<tag k="StreetComplete:quest_type" v="([^"]+)"/.exec(changesetData);
 		        const changesCountMatch = /changes_count="(\d+)"/.exec(changesetData);
+				const userMatch = /user="([^"]+)"/.exec(changesetData); // Regex to extract user
+				var changesetIDMatch =  /id="(\d+)"/.exec(changesetData);
+		
 		
 		        if (questTypeMatch && changesCountMatch) {
-		            const questType = questTypeMatch[1];
-		            const changesCount = parseInt(changesCountMatch[1], 10);
+		            var questType = questTypeMatch[1];
+		            var changesCount = parseInt(changesCountMatch[1], 10);
+					var user = userMatch[1]; // Extracted user
+					var changesetID =  changesetIDMatch[1];
+					console.log(changesetIDMatch[1]);
 		
-		            questTypeCounts[questType] = (questTypeCounts[questType] || 0) + changesCount;
+		
+		            questTypeCounts.push({"changesCount": changesCount, "questType": questType, "user": user, "changesetID": changesetID});
 		        }
 		    }
 		
-		    const result = Object.entries(questTypeCounts).map(([type, count]) => [type, count]);
-		
-		    return result;
+		    return questTypeCounts;
 		}
 		
 		function getRandomInt(max) {
@@ -54,11 +59,13 @@ const scriptsInEvents = {
 			for (const x of questTypes)
 			{
 			let mX = getRandomInt(1850);
-			let mY = -50 - getRandomInt(300) * (x[1] * 0.5) ;
+			let mY = -50 - getRandomInt(300) * (x["changesCount"] * 0.5) ;
 			let questInst = runtime.objects.Quest.createInstance(0, mX, mY);
 			questInst.instVars.age = 0 - getRandomInt(19);
-			questInst.instVars.QuestName = x[0];
-			questInst.instVars.anzahl = x[1];
+			questInst.instVars.QuestName = x["questType"];
+			questInst.instVars.anzahl = x["changesCount"];
+			questInst.instVars.changeSetID =  String(x["changesetID"]);
+			questInst.instVars.user = x["user"];
 			questInst.isVisible = false;
 			} 
 		
