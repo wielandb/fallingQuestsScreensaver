@@ -4692,21 +4692,17 @@ self.C3_ExpressionFuncs = [
 			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
 			const n3 = p._GetNode(3);
-			return () => (and((and((("Nutzer " + n0.ExpInstVar()) + " hat "), n1.ExpInstVar()) + " mal die Frage [b]"), n2.ExpObject(n3.ExpInstVar())) + "[/b] beantwortet. ");
+			return () => (and((and((("Nutzer " + n0.ExpInstVar()) + " hat mit StreetComplete "), n1.ExpInstVar()) + " mal die Frage [b]"), n2.ExpObject(n3.ExpInstVar())) + "[/b] beantwortet. ");
 		},
 		p => {
 			const n0 = p._GetNode(0);
 			const n1 = p._GetNode(1);
 			const n2 = p._GetNode(2);
-			return () => (((and((("Nutzer " + n0.ExpInstVar()) + " hat "), n1.ExpInstVar()) + " Datenpunkte hinzugefügt! (") + n2.ExpInstVar()) + ")");
+			return () => (((and((("Nutzer " + n0.ExpInstVar()) + " hat mit StreetComplete "), n1.ExpInstVar()) + " Datenpunkte hinzugefügt! (") + n2.ExpInstVar()) + ")");
 		},
 		p => {
 			const f0 = p._GetNode(0).GetBoundMethod();
 			return () => f0();
-		},
-		p => {
-			const n0 = p._GetNode(0);
-			return () => n0.ExpObject("AddBuildingType");
 		}
 ];
 

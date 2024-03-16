@@ -1,5 +1,5 @@
 {
-	"AddBuildingType": "Was für eine Art Gebäude ist das?",
+	"AddBuildingType": "Welcher Gebäudetyp ist das?",
 	"AddBuildingLevels": "Wie viele Stockwerke hat dieses Gebäude?",
 	"SidewalkOverlay": "Wo gibt es hier Bürgersteige?",
 	"CyclewayOverlay": "Gibt es hier Radwege? Was für welche?",
@@ -39,6 +39,19 @@
 	"AddBikeRepairAvailability": "Kann man hier sein Fahrrad reparieren lassen?",
 	"AddBinStatusOnBusStop": "Gibt es an dieser Haltestelle einen Mülleimer?",
 	"AddBollardType": "Was für ein Poller ist das?",
-	"AddBridgeStructure": "Was ist die Konstruktionsform dieser Brücke?"
+	"AddBridgeStructure": "Was ist die Konstruktionsform dieser Brücke?",
+	"AdBusStopLit": "Ist diese Haltestelle beleuchtet?",
+	"AddBusStopName": "Wie heißt diese Haltestelle?",
+	"AddBusStopShelter": "Gibt es bei dieser Haltestelle einen Unterstand?",
+	"AddCameraType": "Was für eine Überwachungskamera ist das?",
+	"AddCampPower": "Gibt es an diesem Zeltplatz Strom?",
+	"AddCampShower": "Gibt es bei diesem Zeltplatz eine Dusche?",
+	"AddCampType": "Was für ein Zeltplatz ist das?",
+	"AddCarWashType": "Was für eine Autowäsche ist das?",
+	"AddChargingStationCapacity": "Wie viele Autos können hier geladen werden?",
+	"AddChargingStationOperator": "Wer betriebt diese Ladestation?",
+	"AddClothingBinOperator": "Wer betreibt diesen Altkleidercontainer?",
+	"AddCrossing": "Gibt es hier einen Überweg?",
+	"AddCrossingIsland": "Gibt es bei diesem Übergang eine Verkehrsinsel?"
 	
 }

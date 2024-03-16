@@ -446,9 +446,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text",
-							"sid": 155889385071599,
+							"sid": 624560313701460,
 							"parameters": {
-								"text": "\"Nutzer \" & Quest.user & \" hat \" & Quest.anzahl & \" mal die Frage [b]\" &   JSON.Get(Quest.QuestName)  & \"[/b] beantwortet. \""
+								"text": "\"Nutzer \" & Quest.user & \" hat mit StreetComplete \" & Quest.anzahl & \" mal die Frage [b]\" &   JSON.Get(Quest.QuestName)  & \"[/b] beantwortet. \""
 							}
 						}
 					],
@@ -467,9 +467,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text",
-							"sid": 783486170946345,
+							"sid": 798599892205679,
 							"parameters": {
-								"text": "\"Nutzer \" & Quest.user & \" hat \" & Quest.anzahl & \" Datenpunkte hinzugefügt! (\" & Quest.QuestName & \")\""
+								"text": "\"Nutzer \" & Quest.user & \" hat mit StreetComplete \" & Quest.anzahl & \" Datenpunkte hinzugefügt! (\" & Quest.QuestName & \")\""
 							}
 						}
 					],
@@ -496,14 +496,6 @@
 					"sid": 627289770454095,
 					"parameters": {
 						"data": "AJAX.LastData"
-					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Text",
-					"sid": 479030821711405,
-					"parameters": {
-						"text": "JSON.Get(\"AddBuildingType\")"
 					}
 				}
 			],
