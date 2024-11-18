@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 37900,
+	"savedWithRelease": 40702,
 	"name": "fallingQuests",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -1508,6 +1508,22 @@
 							"file-info": {
 								"purpose": "none"
 							}
+						},
+						{
+							"name": "AddTreeLeafType.svg",
+							"type": "image/svg+xml",
+							"sid": 405445362563346,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "AddBarrierOpening.svg",
+							"type": "image/svg+xml",
+							"sid": 361518019815118,
+							"file-info": {
+								"purpose": "none"
+							}
 						}
 					],
 					"subfolders": [],
@@ -1561,7 +1577,7 @@
 	},
 	"properties": {
 		"description": "A screensaver showing live StreetComplete quests beeing solved",
-		"version": "2.0.0.0",
+		"version": "2.0.0.1",
 		"author": "wielandb",
 		"authorEmail": "",
 		"authorWebsite": "",
@@ -1597,7 +1613,6 @@
 		"gpuPreference": "high-performance",
 		"scriptsType": "module",
 		"framerateMode": "vsync",
-		"compositingMode": "standard",
 		"sampling": "trilinear",
 		"downscaling": "medium",
 		"renderingMode": "auto",

@@ -15,6 +15,8 @@
 						"antialiasing": "off"
 					},
 					"uid": 6,
+					"sid": 489564925721576,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -42,6 +44,8 @@
 						"origin": "center"
 					},
 					"uid": 2,
+					"sid": 257562926276636,
+					"tags": "",
 					"instanceVariables": {
 						"age": -2,
 						"QuestName": "OTHER",
@@ -103,6 +107,8 @@
 						"live-preview": false
 					},
 					"uid": 4,
+					"sid": 975322553488239,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Physik": {
@@ -151,6 +157,8 @@
 						"class": ""
 					},
 					"uid": 7,
+					"sid": 679364713871814,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -178,6 +186,8 @@
 						"live-preview": false
 					},
 					"uid": 8,
+					"sid": 389706357454204,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Physik": {
@@ -222,6 +232,8 @@
 						"live-preview": false
 					},
 					"uid": 9,
+					"sid": 244935406734781,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
 						"Physik": {
@@ -264,6 +276,8 @@
 						"origin": "top-left"
 					},
 					"uid": 3,
+					"sid": 922149123890990,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -309,6 +323,8 @@
 						"read-aloud": false
 					},
 					"uid": 10,
+					"sid": 264026549587221,
+					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
@@ -359,18 +375,26 @@
 			"global": false
 		}
 	],
+	"scene-graphs-folder-root": {
+		"items": [],
+		"subfolders": []
+	},
 	"sid": 297781084374490,
 	"nonworld-instances": [
 		{
 			"type": "JSON",
 			"properties": {},
 			"uid": 11,
+			"sid": 177997979176020,
+			"tags": "",
 			"instanceVariables": {}
 		},
 		{
 			"type": "QuestQuestions",
 			"properties": {},
 			"uid": 12,
+			"sid": 158953249482591,
+			"tags": "",
 			"instanceVariables": {}
 		}
 	],
